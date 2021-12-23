@@ -4,15 +4,12 @@ import numpy as np
 
 video_capture = cv2.VideoCapture(0)
 
-me_image = face_recognition.load_image_file("me.jpg")
-me_face_encoding = face_recognition.face_encodings(me_image)[0]
+pammi_image = face_recognition.load_image_file("pammi.jpg")
+pammi_face_encoding = face_recognition.face_encodings(pammi_image)[0]
 
-emma_image = face_recognition.load_image_file("emma.jpg")
-emma_face_encoding = face_recognition.face_encodings(emma_image)[0]
+known_face_encodings = [pammi_face_encoding]
 
-known_face_encodings = [me_face_encoding, emma_face_encoding]
-
-known_face_names = ["syah", "emma"]
+known_face_names = ["pammi"]
 
 face_locations = []
 face_encodings = []
